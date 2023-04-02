@@ -1,0 +1,69 @@
+<html >
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./accueil.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col" id="utilisateur_connexion">
+                <form action="" method="POST" id="form_connexion">
+                    <div class="form-group">
+                        <label for="pseudo">pseudo  : </label>
+                        <input type="text" name="pseudo" id="pseudo" class="form-control" placeholder="Entrez votre pseudo"
+                            required >
+                    </div>
+                    <div class="form-group">
+                        <label for="motDePasse">Mot de passe</label>
+                        <input type="password" name="motDePasse" id="motDePasse" class="form-control" placeholder="Entrez votre mot de passe"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="connexion_btn">Se connecter</button>
+                </form>
+
+                <div id="message" class="alert alert-secondary mt-2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="utilisateur_inscription">
+                <form action="/inscription" method="POST" id="form_inscription">
+                    <div class="form-group">
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" name="pseudo" id="pseudo_init" class="form-control"
+                            placeholder="Entrez votre pseudo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email_init" class="form-control" placeholder="Entrez votre email"
+                            required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$">
+                    </div>
+                    <div class="form-group">
+                        <label for="motDePasse">Mot de passe</label>
+                        <input type="password" name="motDePasse" id="motDePasse_init" class="form-control" placeholder="Entrez un mot de passe"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="inscription_btn">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                    <button type="button" class="btn btn-primary" id="deconnexion_btn">Se deconnecter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./maLibrairie.js" type="module"></script>
+</body>
+
+</html>
